@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import SwiftOpenAI
 
 /*
  Thanks to James Rochabrun for his excellent work on the SwiftOpenAI library.

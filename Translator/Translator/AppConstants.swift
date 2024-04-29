@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import SwiftOpenAI
 
 /*
  Thanks to James Rochabrun for his excellent work on the SwiftOpenAI library.
@@ -34,7 +35,6 @@ import SwiftData
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 */
-import SwiftOpenAI
 
 enum AppConstants {
 #if DEBUG && targetEnvironment(simulator)
