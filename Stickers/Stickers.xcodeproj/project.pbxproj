@@ -19,6 +19,7 @@
 		0DDD246C2B4DF18100B2AE5C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD246A2B4DF18100B2AE5C /* AppConstants.swift */; };
 		0DDD246D2B4DF18100B2AE5C /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD246B2B4DF18100B2AE5C /* AppLogger.swift */; };
 		0DDD24722B4DF1B000B2AE5C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24712B4DF1B000B2AE5C /* ButtonStyles.swift */; };
+		2C3B8D832C011673008FBE71 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3B8D822C011673008FBE71 /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3B8D832C011673008FBE71 /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +110,7 @@
 			);
 			name = Stickers;
 			packageProductDependencies = (
+				2C3B8D822C011673008FBE71 /* SwiftOpenAI */,
 			);
 			productName = Stickers;
 			productReference = 0DDD23222B4DE0A300B2AE5C /* Stickers.app */;
@@ -138,6 +141,7 @@
 			);
 			mainGroup = 0DDD23192B4DE0A300B2AE5C;
 			packageReferences = (
+				2C3B8D812C011673008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0DDD23232B4DE0A300B2AE5C /* Products */;
 			projectDirPath = "";
@@ -384,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C3B8D812C011673008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C3B8D822C011673008FBE71 /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C3B8D812C011673008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DDD231A2B4DE0A300B2AE5C /* Project object */;
 }

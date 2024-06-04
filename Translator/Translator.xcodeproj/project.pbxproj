@@ -17,8 +17,8 @@
 		0DDD243F2B4DF06A00B2AE5C /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD243A2B4DF06A00B2AE5C /* TranslateView.swift */; };
 		0DDD24422B4DF07600B2AE5C /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24402B4DF07600B2AE5C /* AppLogger.swift */; };
 		0DDD24432B4DF07600B2AE5C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24412B4DF07600B2AE5C /* AppConstants.swift */; };
-		0DDD24462B4DF0B200B2AE5C /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDD24452B4DF0B200B2AE5C /* SwiftOpenAI */; };
 		0DDD24482B4DF0DD00B2AE5C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24472B4DF0DD00B2AE5C /* ButtonStyles.swift */; };
+		2C3B8D7D2C011666008FBE71 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3B8D7C2C011666008FBE71 /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDD24462B4DF0B200B2AE5C /* SwiftOpenAI in Frameworks */,
+				2C3B8D7D2C011666008FBE71 /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 			);
 			name = Translator;
 			packageProductDependencies = (
-				0DDD24452B4DF0B200B2AE5C /* SwiftOpenAI */,
+				2C3B8D7C2C011666008FBE71 /* SwiftOpenAI */,
 			);
 			productName = Translator;
 			productReference = 0DDD237C2B4DE34F00B2AE5C /* Translator.app */;
@@ -138,7 +138,7 @@
 			);
 			mainGroup = 0DDD23732B4DE34F00B2AE5C;
 			packageReferences = (
-				0DDD24442B4DF0B200B2AE5C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+				2C3B8D7B2C011666008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0DDD237D2B4DE34F00B2AE5C /* Products */;
 			projectDirPath = "";
@@ -309,7 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Translator/Preview Content\"";
-				DEVELOPMENT_TEAM = 9557YJ9D37;
+				DEVELOPMENT_TEAM = 553LMX46SJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -340,7 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Translator/Preview Content\"";
-				DEVELOPMENT_TEAM = 9557YJ9D37;
+				DEVELOPMENT_TEAM = 553LMX46SJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -386,20 +386,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0DDD24442B4DF0B200B2AE5C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+		2C3B8D7B2C011666008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0DDD24452B4DF0B200B2AE5C /* SwiftOpenAI */ = {
+		2C3B8D7C2C011666008FBE71 /* SwiftOpenAI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0DDD24442B4DF0B200B2AE5C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			package = 2C3B8D7B2C011666008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
 			productName = SwiftOpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */

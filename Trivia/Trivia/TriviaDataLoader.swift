@@ -43,18 +43,18 @@ final actor TriviaDataLoader {
             let pastQuestionsList = self.pastQuestions.joined(separator: "\n\n")
             messages += "\nDo not repeat any of these questions: \(pastQuestionsList)"
         }
-
+        
         let parameters = ChatCompletionParameters(
-           messages: [
-            .init(role: .user, content: .text("Ask me a question about: \(topic)")),
-            .init(role: .system, content: .text(messages))
-           ],
-           model: .gpt41106Preview, // .gpt35Turbo1106 also works, and is faster, but duplicates questions.
-           responseFormat: ChatCompletionParameters.ResponseFormat.init(type: "json_object")
+            messages: [
+                .init(role: .user, content: .text("Ask me a question about: \(topic)")),
+                .init(role: .system, content: .text(messages))
+            ],
+            model: .gpt4o,
+            responseFormat: .type("json_object")
         )
-
-        let choices = try await AppConstants.openAI.startChat(parameters: parameters).choices
-        guard let text = choices.first?.message.content else {
+        let chatCompletionObject = try await AppConstants.openAI.startChat(parameters: parameters)
+        
+        guard let text = chatCompletionObject.choices.first?.message.content else {
             throw TriviaFetcherError.couldNotFetchQuestion
         }
 

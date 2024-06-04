@@ -18,7 +18,7 @@
 		0DDD23FE2B4DE70A00B2AE5C /* ChatDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD23FA2B4DE70A00B2AE5C /* ChatDataLoader.swift */; };
 		0DDD24002B4DE79300B2AE5C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD23FF2B4DE79300B2AE5C /* AppConstants.swift */; };
 		0DDD24022B4DE7AF00B2AE5C /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24012B4DE7AF00B2AE5C /* AppLogger.swift */; };
-		0DDD24052B4DE82200B2AE5C /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDD24042B4DE82200B2AE5C /* SwiftOpenAI */; };
+		2C3B8D742C01164E008FBE71 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3B8D732C01164E008FBE71 /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDD24052B4DE82200B2AE5C /* SwiftOpenAI in Frameworks */,
+				2C3B8D742C01164E008FBE71 /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 			);
 			name = Chat;
 			packageProductDependencies = (
-				0DDD24042B4DE82200B2AE5C /* SwiftOpenAI */,
+				2C3B8D732C01164E008FBE71 /* SwiftOpenAI */,
 			);
 			productName = Chat;
 			productReference = 0DDD23022B4DE02100B2AE5C /* Chat.app */;
@@ -138,7 +138,7 @@
 			);
 			mainGroup = 0DDD22F92B4DE02100B2AE5C;
 			packageReferences = (
-				0DDD24032B4DE82200B2AE5C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+				2C3B8D722C01164E008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0DDD23032B4DE02100B2AE5C /* Products */;
 			projectDirPath = "";
@@ -309,7 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
-				DEVELOPMENT_TEAM = 9557YJ9D37;
+				DEVELOPMENT_TEAM = 553LMX46SJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -340,7 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
-				DEVELOPMENT_TEAM = 9557YJ9D37;
+				DEVELOPMENT_TEAM = 553LMX46SJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -386,20 +386,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0DDD24032B4DE82200B2AE5C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+		2C3B8D722C01164E008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0DDD24042B4DE82200B2AE5C /* SwiftOpenAI */ = {
+		2C3B8D732C01164E008FBE71 /* SwiftOpenAI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0DDD24032B4DE82200B2AE5C /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			package = 2C3B8D722C01164E008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
 			productName = SwiftOpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -26,6 +26,7 @@
 		0DDD24302B4DEFB100B2AE5C /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD242F2B4DEFB100B2AE5C /* FileUtils.swift */; };
 		0DDD24322B4DEFC700B2AE5C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24312B4DEFC700B2AE5C /* ButtonStyles.swift */; };
 		0DDD24742B4DF1DF00B2AE5C /* ModelContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24732B4DF1DF00B2AE5C /* ModelContext+Extensions.swift */; };
+		2C3B8D7A2C01165C008FBE71 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3B8D792C01165C008FBE71 /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3B8D7A2C01165C008FBE71 /* SwiftOpenAI in Frameworks */,
 				0D8883992BDE089200A78B91 /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +131,7 @@
 			name = Transcriber;
 			packageProductDependencies = (
 				0D8883982BDE089200A78B91 /* SwiftOpenAI */,
+				2C3B8D792C01165C008FBE71 /* SwiftOpenAI */,
 			);
 			productName = Transcriber;
 			productReference = 0DDD23962B4DE36300B2AE5C /* Transcriber.app */;
@@ -159,6 +162,7 @@
 			);
 			mainGroup = 0DDD238D2B4DE36300B2AE5C;
 			packageReferences = (
+				2C3B8D782C01165C008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0DDD23972B4DE36300B2AE5C /* Products */;
 			projectDirPath = "";
@@ -414,9 +418,25 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2C3B8D782C01165C008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		0D8883982BDE089200A78B91 /* SwiftOpenAI */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = SwiftOpenAI;
+		};
+		2C3B8D792C01165C008FBE71 /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C3B8D782C01165C008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
 			productName = SwiftOpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */

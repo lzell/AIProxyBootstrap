@@ -21,12 +21,19 @@ struct TranslationDataLoader {
     /// - Returns: the spanish translation
     static func run(on input: String) async -> String {
 
+//        let parameters = ChatCompletionParameters(
+//           messages: [
+//            .init(role: .system, content: .text(prompt)),
+//            .init(role: .user, content: .text(input)),
+//           ],
+//           model: .gpt41106Preview
+//        )
         let parameters = ChatCompletionParameters(
-           messages: [
-            .init(role: .system, content: .text(prompt)),
-            .init(role: .user, content: .text(input)),
-           ],
-           model: .gpt41106Preview
+            messages: [
+                .init(role: .system, content: .text(prompt)),
+                .init(role: .user, content: .text(input)),
+            ],
+            model: .gpt4o
         )
         do {
             let choices = try await AppConstants.openAI.startChat(parameters: parameters).choices
@@ -35,7 +42,7 @@ struct TranslationDataLoader {
                 return text
             }
         } catch {
-            AppLogger.error("Could not translate using gpt41106preview: \(error)")
+            AppLogger.error("Could not translate using gpt4o: \(error)")
         }
         return "Translation failed!"
     }

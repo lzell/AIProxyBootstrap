@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 import RegexBuilder
+import SwiftOpenAI
 
 enum ClassifierDataLoaderError: Error {
     case couldNotCreateImageURL
     case couldNotIdentifyPlant
 }
-
 
 /// Sends requests to OpenAI to classify plant images, and returns the result asynchronously
 final actor ClassifierDataLoader {
@@ -26,27 +26,32 @@ final actor ClassifierDataLoader {
         guard let localURL = image.openAILocalURLEncoding() else {
             throw ClassifierDataLoaderError.couldNotCreateImageURL
         }
+  
+        let prompt = "What is this?"
+        let messageContent: [ChatCompletionParameters.Message.ContentType.MessageContent] = [.text(prompt), .imageUrl(localURL)]
+        let parameters = ChatCompletionParameters(messages: [.init(role: .user, content: .contentArray(messageContent))], model: .gpt41106Preview)
+        let response = try await AppConstants.openAI.startChat(parameters: parameters)
 
-        let content: [AIProxy.Message.ContentType.MessageContent] = [
-            .text("Juanjo put your user prompt here"),
-            .imageUrl(localURL)
-        ]
-
-        let requestBody = AIProxy.ChatRequestBody(
-            model: "gpt-4-vision-preview",
-            messages: [
-                .init(role: "user", content: .contentArray(content)),
-                .init(role: "system", content: .text("Juanjo put your system prompt here"))
-               ],
-            maxTokens: 300
-        )
-
-        let response = try await AIProxy.chatCompletionRequest(
-            chatRequestBody: requestBody
-        )
+//        let content: [AIProxy.Message.ContentType.MessageContent] = [
+//            .text("Juanjo put your user prompt here"),
+//            .imageUrl(localURL)
+//        ]
+//
+//        let requestBody = AIProxy.ChatRequestBody(
+//            model: "gpt-4-vision-preview",
+//            messages: [
+//                .init(role: "user", content: .contentArray(content)),
+//                .init(role: "system", content: .text("Juanjo put your system prompt here"))
+//               ],
+//            maxTokens: 300
+//        )
+//
+//        let response = try await AIProxy.chatCompletionRequest(
+//            chatRequestBody: requestBody
+//        )
 
         // Do something with response.choices, e.g.
-        print(response.choices.first?.message.content)
+//        print(response.choices.first?.message.content)
 
         let choices = response.choices
         guard let text = choices.first?.message.content else {

@@ -149,6 +149,7 @@
 			);
 			mainGroup = 0DE4A5A62B1F79F9004D877E;
 			packageReferences = (
+				2C0CEB522C002B5B0073D8D0 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0DE4A5B02B1F79F9004D877E /* Products */;
 			projectDirPath = "";
@@ -362,6 +363,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C0CEB522C002B5B0073D8D0 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0DE4A5A72B1F79F9004D877E /* Project object */;
 }

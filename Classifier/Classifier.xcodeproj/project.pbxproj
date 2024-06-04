@@ -19,6 +19,7 @@
 		0DDD24132B4DEE9700B2AE5C /* CameraDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD240C2B4DEE9700B2AE5C /* CameraDataLoader.swift */; };
 		0DDD24162B4DEEB400B2AE5C /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24142B4DEEB400B2AE5C /* AppLogger.swift */; };
 		0DDD24172B4DEEB400B2AE5C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD24152B4DEEB400B2AE5C /* AppConstants.swift */; };
+		2C3B8D772C011655008FBE71 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3B8D762C011655008FBE71 /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3B8D772C011655008FBE71 /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +110,7 @@
 			);
 			name = Classifier;
 			packageProductDependencies = (
+				2C3B8D762C011655008FBE71 /* SwiftOpenAI */,
 			);
 			productName = Classifier;
 			productReference = 0DDD23B02B4DE37500B2AE5C /* Classifier.app */;
@@ -138,6 +141,7 @@
 			);
 			mainGroup = 0DDD23A72B4DE37500B2AE5C;
 			packageReferences = (
+				2C3B8D752C011655008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 0DDD23B12B4DE37500B2AE5C /* Products */;
 			projectDirPath = "";
@@ -309,7 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Classifier/Preview Content\"";
-				DEVELOPMENT_TEAM = 9557YJ9D37;
+				DEVELOPMENT_TEAM = 553LMX46SJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required to take a photo of your plant";
@@ -341,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Classifier/Preview Content\"";
-				DEVELOPMENT_TEAM = 9557YJ9D37;
+				DEVELOPMENT_TEAM = 553LMX46SJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required to take a photo of your plant";
@@ -386,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C3B8D752C011655008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C3B8D762C011655008FBE71 /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C3B8D752C011655008FBE71 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DDD23A82B4DE37500B2AE5C /* Project object */;
 }

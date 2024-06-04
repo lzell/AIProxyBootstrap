@@ -29,7 +29,7 @@ final actor ChatDataLoader {
         self.messages.append(.init(role: .user, content: .text(prompt)))
         let parameters = ChatCompletionParameters(
             messages: self.messages,
-            model: .gpt41106Preview
+            model: .gpt4o
         )
         let stream = try await AppConstants.openAI.startStreamedChat(parameters: parameters)
 

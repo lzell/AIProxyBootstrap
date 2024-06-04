@@ -8,6 +8,7 @@
 import Foundation
 import Vision
 import UIKit
+import SwiftOpenAI
 
 final actor StickerDataLoader {
     /// Creates a sticker from a given `prompt` using OpenAI's APIs
@@ -17,17 +18,11 @@ final actor StickerDataLoader {
     /// - Parameter prompt: The user-entered prompt
     /// - Returns: A sticker as a UIImage if we were able to get one from OpenAI, or nil otherwise
     func create(fromPrompt prompt: String) async throws -> UIImage? {
+        
         let adjustedPrompt = "cute design of a " + prompt + " kawaii sticker. nothing in the bg. white bg."
-
-
-        let requestBody = AIProxy.ImageGenerationRequestBody(
-            prompt: adjustedPrompt,
-            size: "1024x1024"
-        )
-        let response = try await AIProxy.imageGenerationRequest(
-            imageRequestBody: requestBody
-        )
-
+        let createParameters = ImageCreateParameters(prompt: adjustedPrompt, model: .dalle3(.largeSquare))
+        let response = try await AppConstants.openAI.createImages(parameters: createParameters)
+        
         guard let url = response.data.first?.url, let data = try? Data(contentsOf: url) else {
             AppLogger.error("OpenAI returned a sticker imageURL that we could not fetch")
             return nil
