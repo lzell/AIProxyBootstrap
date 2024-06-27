@@ -37,13 +37,13 @@ import SwiftData
 import SwiftOpenAI
 
 enum AppConstants {
-#warning("You must change the placeholders below for building and running")
-#if DEBUG && targetEnvironment(simulator)
+    #warning(
+        """
+        You must follow the AIProxy integration guide to build and run on device.
+        Please see https://www.aiproxy.pro/docs/integration-guide.html")
+        """
+    )
     static let openAI: some OpenAIService = OpenAIServiceFactory.service(
-        aiproxyPartialKey: "hardcode_partial_key_here",
-        aiproxyDeviceCheckBypass: "hardcode_device_check_bypass_here")
-#else
-    static let openAI: some OpenAIService = OpenAIServiceFactory.service(
-        aiproxyPartialKey: "hardcode_partial_key_here")
-#endif
+        aiproxyPartialKey: "hardcode_partial_key_here"
+    )
 }
