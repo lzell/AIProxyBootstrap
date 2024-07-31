@@ -1,6 +1,9 @@
-# Starter apps for AIProxy
+# Starter apps for AIProxy, using the SwiftOpenAI library
 
-OpenAI sample apps that have AIProxy already included (requires an AIProxy key to build and run). Each app uses the SwiftOpenAI community package to implement API calls.
+Use these apps as a jumping off point to build your own OpenAI experiences on iOS. There are
+six apps, each with a placeholder to add your AIProxy constants (see AppConstants.swift). The
+apps all use the [SwiftOpenAI](https://github.com/jamesrochabrun/SwiftOpenAI) community package
+to implement API calls.
 
 ### Instructions to build and run
 
@@ -16,4 +19,3 @@ OpenAI sample apps that have AIProxy already included (requires an AIProxy key t
 - **Translator** - A simple English to Spanish translation app with text to speech.
 - **Trivia Game** - A trivia game that uses GPT to generate multiple choice questions from a JSON response.
 - **Stickers** - An app that turns a prompt into a kawaii style sticker and extracts the foreground/background using Vision.
-

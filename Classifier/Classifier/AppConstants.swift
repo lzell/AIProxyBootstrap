@@ -46,6 +46,7 @@ enum AppConstants {
         """
     )
     static let openAI: some OpenAIService = OpenAIServiceFactory.service(
-        aiproxyPartialKey: "hardcode_partial_key_here"
+        aiproxyPartialKey: "hardcode_partial_key_here",
+        aiproxyServiceURL: "hardcode_service_url_here"
     )
 }
