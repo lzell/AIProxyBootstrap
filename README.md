@@ -12,7 +12,7 @@ Use these apps as a jumping off point to build your own experiences using AIProx
 
 ### OpenAI Sample apps
 
-- **AIColorPalette** - A color palette generator that uses an image as input.
+- **AIColorPalette** - A color palette generator that uses an image as input (requires Xcode 16 beta).
 - **Chat** - A basic chat application and interface. Includes streaming responses and ability to stop stream.
 - **Image Classifier** - An image classification app that identifies plants and provides a link to Wikipedia.
 - **Transriber** - An app that transcribes audio recorded using the device microphone.
