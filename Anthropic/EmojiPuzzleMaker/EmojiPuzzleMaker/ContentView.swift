@@ -10,6 +10,12 @@ import SwiftUI
 import WebKit
 import Foundation
 
+// Visit http://airoxy.pro to get a new partial key and DeviceCheck bypass token.
+//
+// See the README at https://github.com/lzell/AIProxySwift for instructions on
+// adding a DeviceCheck bypass token as an environment variable (which is required
+// for AIProxy to work in the iOS simulator)
+#warning("You must replace the placeholder below")
 let service = AIProxy.anthropicService(
     partialKey: "hardcode_partial_key_here",
     serviceURL: "hardcode_service_url_here"

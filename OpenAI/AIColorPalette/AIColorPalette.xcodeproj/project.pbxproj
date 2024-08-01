@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		2CE5D2E82C247CA500E53983 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5D2E72C247CA500E53983 /* ContentView.swift */; };
 		2CE5D2EA2C247CA600E53983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5D2E92C247CA600E53983 /* Assets.xcassets */; };
 		2CE5D2ED2C247CA600E53983 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5D2EC2C247CA600E53983 /* Preview Assets.xcassets */; };
+		2CF0AB4E2C5C133B00BFA8BC /* AIProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 2CF0AB4D2C5C133B00BFA8BC /* AIProxy */; };
 		2CFD48A92C24BC480065C162 /* AIProxyIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD48A82C24BC480065C162 /* AIProxyIntegration.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D24C88C2C29DA4B009E0102 /* AIProxy in Frameworks */,
+				2CF0AB4E2C5C133B00BFA8BC /* AIProxy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +104,7 @@
 			name = AIColorPalette;
 			packageProductDependencies = (
 				0D24C88B2C29DA4B009E0102 /* AIProxy */,
+				2CF0AB4D2C5C133B00BFA8BC /* AIProxy */,
 			);
 			productName = AIColorPalette;
 			productReference = 2CE5D2E22C247CA500E53983 /* AIColorPalette.app */;
@@ -132,7 +135,7 @@
 			);
 			mainGroup = 2CE5D2D92C247CA500E53983;
 			packageReferences = (
-				0D24C88A2C29DA4B009E0102 /* XCLocalSwiftPackageReference ".." */,
+				2CF0AB4C2C5C133B00BFA8BC /* XCRemoteSwiftPackageReference "AIProxySwift" */,
 			);
 			productRefGroup = 2CE5D2E32C247CA500E53983 /* Products */;
 			projectDirPath = "";
@@ -377,16 +380,25 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		0D24C88A2C29DA4B009E0102 /* XCLocalSwiftPackageReference ".." */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ..;
+/* Begin XCRemoteSwiftPackageReference section */
+		2CF0AB4C2C5C133B00BFA8BC /* XCRemoteSwiftPackageReference "AIProxySwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lzell/AIProxySwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		0D24C88B2C29DA4B009E0102 /* AIProxy */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = AIProxy;
+		};
+		2CF0AB4D2C5C133B00BFA8BC /* AIProxy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CF0AB4C2C5C133B00BFA8BC /* XCRemoteSwiftPackageReference "AIProxySwift" */;
 			productName = AIProxy;
 		};
 /* End XCSwiftPackageProductDependency section */

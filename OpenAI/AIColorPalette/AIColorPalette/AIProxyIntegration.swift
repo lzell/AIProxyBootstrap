@@ -9,17 +9,18 @@ import AIProxy // The AIProxy SPM package is found at https://github.com/lzell/A
 import Foundation
 import UIKit
 
-struct AIProxyIntegration {
+// Visit http://airoxy.pro to get a new partial key and DeviceCheck bypass token.
+//
+// See the README at https://github.com/lzell/AIProxySwift for instructions on
+// adding a DeviceCheck bypass token as an environment variable (which is required
+// for AIProxy to work in the iOS simulator)
+#warning("You must replace the placeholders below")
+let openAIService = AIProxy.openAIService(
+    partialKey: "partial-key-from-your-developer-dashboard",
+    serviceURL: "service-url-from-your-developer-dashboard"
+)
 
-    // Visit http://airoxy.pro to get a new partial key and DeviceCheck bypass token.
-    //
-    // See the README at https://github.com/lzell/AIProxySwift for instructions on
-    // adding a DeviceCheck bypass token as an environment variable (which is required
-    // for AIProxy to work in the iOS simulator)
-    #warning("You must replace the placeholder below")
-    static let openAIService = AIProxy.openAIService(
-        partialKey: "<placeholder>"
-    )
+struct AIProxyIntegration {
 
     static func getColorPalette(forImage image: UIImage) async -> String? {
         let message = "generate a color palette based on the provided image, return 4 colors in valid JSON, nothing else. Here's an example of the JSON format: 'colors': [{red: 0.85, green: 0.85, blue: 0.85}, {red: 0.85, green: 0.85, blue: 0.85}, {red: 0.85, green: 0.85, blue: 0.85}, {red: 0.85, green: 0.85, blue: 0.85}, {red: 0.85, green: 0.85, blue: 0.85}]."
