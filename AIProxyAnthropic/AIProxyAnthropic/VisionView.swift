@@ -18,7 +18,7 @@ struct VisionView: View {
     func generate() async throws {
         
         guard let image = UIImage(named: "climber") else {
-            print("Could not find an image named 'marina' in your app assets")
+            print("Could not find an image named 'climber' in your app assets")
             return
         }
 

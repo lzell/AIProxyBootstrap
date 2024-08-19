@@ -20,6 +20,7 @@ struct ImageGenView: View {
         do {
             let body = StabilityAIUltraRequestBody(prompt: prompt)
             
+            // This demo is of text-to-image, which only requires a prompt
             // To use image-to-image the following parameters are required:
             // prompt - text to generate the image from
             // image - the image to use as the starting point for the generation
