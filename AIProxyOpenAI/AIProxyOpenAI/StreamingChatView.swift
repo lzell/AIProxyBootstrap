@@ -19,7 +19,7 @@ struct StreamingChatView: View {
         
         let requestBody = OpenAIChatCompletionRequestBody(
             model: "gpt-4o",
-            messages: [.init(role: "user", content: .text(prompt))]
+            messages: [.user(content: .text(prompt))]
         )
         isLoading = true
         defer { isLoading = false }

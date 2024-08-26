@@ -72,12 +72,10 @@ struct MultiModalChatView: View {
             let response = try await openAIService.chatCompletionRequest(body: .init(
                 model: "gpt-4o",
                 messages: [
-                    .init(
-                        role: "system",
+                    .system(
                         content: .text("Tell me what you see")
                     ),
-                    .init(
-                        role: "user",
+                    .user(
                         content: .parts(
                             [
                                 .text("What do you see?"),

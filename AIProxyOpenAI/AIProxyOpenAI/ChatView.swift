@@ -21,7 +21,7 @@ struct ChatView: View {
         do {
             let response = try await openAIService.chatCompletionRequest(body: .init(
                 model: "gpt-4o",
-                messages: [.init(role: "system", content: .text(prompt))]
+                messages: [.system(content: .text(prompt))]
             ))
             result = (response.choices.first?.message.content)!
             showingAlert = true
