@@ -14,6 +14,7 @@ Use these apps as a jumping off point to build your own experiences using AIProx
 - **AIProxyAnthropic** - An Anthropic app that generates a message.
 - **AIProxyDeepL** - A DeepL app that translates input text to Spanish.
 - **AIProxyOpenAI** - An OpenAI app with chat, DALLE, and vision.
+- **AIProxyReplicate** - A Replicate app with Stable Diffusion XL.
 - **AIProxyStability** - A Stability AI app that generates an image.
 - **AIProxyTogetherAI** - A Together AI app with examples for chat, streaming chat, and JSON response.
 
