@@ -57,7 +57,7 @@ final class TranscriberManager {
     /// Removes a recording from persistent storage and deletes the associated audio file from disk
     /// - Parameter index: the index in `recordings` to delete
     func deleteRecording(at index: Int) {
-        FileUtils.deleteFile(at: self.recordings[index].audioRecording.url)
+        FileUtils.deleteFile(at: self.recordings[index].audioRecording.localUrl)
         self.modelContext.delete(self.recordings[index])
         self.recordings = fetchPersistedRecordings(self.modelContext)
     }

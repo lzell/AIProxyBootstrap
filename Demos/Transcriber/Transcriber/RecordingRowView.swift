@@ -49,7 +49,7 @@ struct RecordingRowView: View {
 }
 
 private func previewRecording() -> TranscribedAudioRecording {
-    let audioRecording = AudioRecording(url: URL(fileURLWithPath: "/dev/null"),
+    let audioRecording = AudioRecording(localUrl: URL(fileURLWithPath: "/dev/null"),
                                         duration: "1.2s")
     return TranscribedAudioRecording(
         audioRecording: audioRecording,

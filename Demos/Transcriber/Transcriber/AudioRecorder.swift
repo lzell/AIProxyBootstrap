@@ -48,6 +48,6 @@ final class AudioRecorder {
         }
         sampleVendor.stop()
         let url = await fileWriter.finishWriting()
-        return AudioRecording(url: url, duration: duration)
+        return AudioRecording(localUrl: url, duration: duration)
     }
 }

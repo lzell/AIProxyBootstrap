@@ -18,7 +18,7 @@ final actor ChatDataLoader {
 
     /// All chat messages, including user queries and openai responses.
     /// The full history of the chat is sent with each request to openai to provide an ongoing conversation with memory.
-    private var messages = [ChatCompletionParameters.Message]()
+    private var messages = [OpenAIChatCompletionMessage]()
 
     /// Add a user message to the conversation and stream back the openai response
     func addToConversation(_ prompt: String) async throws -> AsyncThrowingStream<String, Error> {
@@ -27,14 +27,7 @@ final actor ChatDataLoader {
         }
         self.streamingResponseAccumulator = ""
         
-        // SwiftOpenAICode
-        self.messages.append(.init(role: .user, content: .text(prompt)))
-//        let parameters = ChatCompletionParameters(
-//            messages: self.messages,
-//            model: .gpt4o
-//        )
-//        let stream = try await AppConstants.openAI.startStreamedChat(parameters: parameters)
-        
+        self.messages.append((.user(content: .text(prompt))))
         let requestBody = OpenAIChatCompletionRequestBody(
             model: "gpt-4o-mini",
             messages: [.user(content: .text(prompt))]
@@ -74,7 +67,7 @@ final actor ChatDataLoader {
 
     private func addAccumulatedResponseToMessageHistory() {
         if let accumulator = self.streamingResponseAccumulator {
-            self.messages.append(.init(role: .assistant, content: .text(accumulator)))
+            self.messages.append(.assistant(content: .text(accumulator)))
             self.streamingResponseAccumulator = nil
         }
     }
