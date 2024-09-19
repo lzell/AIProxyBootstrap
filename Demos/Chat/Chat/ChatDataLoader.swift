@@ -33,9 +33,6 @@ final actor ChatDataLoader {
             messages: [.user(content: .text(prompt))]
         )
         let stream = try await AppConstants.openAIService.streamingChatCompletionRequest(body: requestBody)
-        for try await chunk in stream {
-            print(chunk.choices.first?.delta.content ?? "")
-        }
 
         return AsyncThrowingStream { continuation in
             let task = Task {
