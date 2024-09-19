@@ -1,6 +1,6 @@
 # Starter apps for AIProxy
 
-Use these apps as a jumping off point to build your own experiences using AIProxy. Sample apps are organized by services (for ex. OpenAI, Anthropic etc.). Each sample app has a placeholder to add your AIProxy constants (see AppConstants.swift). The apps all use either [AIProxySwift](https://github.com/lzell/AIProxySwift) or [SwiftOpenAI](https://github.com/jamesrochabrun/SwiftOpenAI) to implement API calls.
+Use these apps as a jumping off point to build your own experiences using AIProxy. Sample apps are organized by services (for ex. OpenAI, Anthropic etc.). Each sample app has a placeholder to add your AIProxy constants (see AppConstants.swift). The apps all use [AIProxySwift](https://github.com/lzell/AIProxySwift) to implement API calls.
 
 ### Instructions to build and run
 
