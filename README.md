@@ -4,7 +4,7 @@ Use these apps as a jumping off point to build your own experiences using AIProx
 
 ### Instructions to build and run
 
-1. Watch [the AIProxy integration video](https://www.aiproxy.pro/docs/integration-guide.html) 
+1. Watch [the AIProxy bootstrap walkthrough video](https://www.youtube.com/watch?v=ohsN9awCzw4)
 2. Replace the constants in `AppConstants.swift` files with the snippet you receive from the AIProxy dashboard in step 1
 3. Change the bundler identifier of the sample app to match the App ID you created in step 1
 4. Add an AIPROXY_DEVICE_CHECK_BYPASS env variable to Xcode. This is necessary for the iOS simulator to communicate with the AIProxy backend. Type **cmd-shift-comma** to open up the "Edit Schemes" menu. Select Run in the sidebar, then select Arguments from the top nav. Add to the "Environment Variables" section an env variable with name AIPROXY_DEVICE_CHECK_BYPASS and value displayed on the key details screen.
