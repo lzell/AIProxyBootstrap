@@ -43,17 +43,7 @@ final actor TriviaDataLoader {
             let pastQuestionsList = self.pastQuestions.joined(separator: "\n\n")
             messages += "\nDo not repeat any of these questions: \(pastQuestionsList)"
         }
-        
-//        let parameters = ChatCompletionParameters(
-//            messages: [
-//                .init(role: .user, content: .text("Ask me a question about: \(topic)")),
-//                .init(role: .system, content: .text(messages))
-//            ],
-//            model: .gpt4o,
-//            responseFormat: .type("json_object")
-//        )
-//        let chatCompletionObject = try await AppConstants.openAI.startChat(parameters: parameters)
-        
+
         let requestBody = OpenAIChatCompletionRequestBody(
             model: "gpt-4o",
             messages: [
@@ -63,7 +53,7 @@ final actor TriviaDataLoader {
             responseFormat: .jsonObject
         )
         let response = try await AppConstants.openAIService.chatCompletionRequest(body: requestBody)
-        
+
         guard let text = response.choices.first?.message.content else {
             throw TriviaFetcherError.couldNotFetchQuestion
         }
