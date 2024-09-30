@@ -20,7 +20,8 @@ Use these apps as a jumping off point to build your own experiences using AIProx
 
 ### Playground apps
 
-- **AIColorPalette** - An OpenAI color palette generator that uses an image as input (requires Xcode 16 beta).
+- **PuLIDDemo** - An image generator app that uses PuLID on Replicate (requires Xcode 16).
+- **AIColorPalette** - An OpenAI color palette generator that uses an image as input (requires Xcode 16).
 - **Chat** - A basic chat application and interface with OpenAI. Includes streaming responses and ability to stop stream.
 - **Image Classifier** - An OpenAI image classification app that identifies plants and provides a link to Wikipedia.
 - **Transriber** - An OpenAI app that transcribes audio recorded using the device microphone.
