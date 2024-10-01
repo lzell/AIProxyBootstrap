@@ -15,6 +15,7 @@ Use these apps as a jumping off point to build your own experiences using AIProx
 - **AIProxyDeepL** - A DeepL app that translates input text to Spanish.
 - **AIProxyOpenAI** - An OpenAI app with chat, DALLE, and vision.
 - **AIProxyReplicate** - A Replicate app with Stable Diffusion XL.
+- **AIProxyGroq** - A Groq app with chat completion and streaming chat completion examples.
 - **AIProxyStability** - A Stability AI app that generates an image.
 - **AIProxyTogetherAI** - A Together AI app with examples for chat, streaming chat, and JSON response.
 
