@@ -87,7 +87,7 @@ struct ImageToVideoView: View {
         }
     }
     
-    func generate() async throws {
+    private func generate() async throws {
 
         isLoading = true  // Start loading
         defer { isLoading = false }
@@ -108,7 +108,7 @@ struct ImageToVideoView: View {
         }
     }
     
-    func openURL(_ url: URL) {
+    private func openURL(_ url: URL) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }

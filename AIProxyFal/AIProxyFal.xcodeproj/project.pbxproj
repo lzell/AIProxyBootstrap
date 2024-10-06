@@ -10,7 +10,7 @@
 		2C20F2992CB0E755001ECE32 /* ImageToVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C20F2982CB0E755001ECE32 /* ImageToVideoView.swift */; };
 		2C20F29C2CB0EB31001ECE32 /* AIProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 2C20F29B2CB0EB31001ECE32 /* AIProxy */; };
 		2C885B432CB1CD0A00C23BAD /* AIProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 2C885B422CB1CD0A00C23BAD /* AIProxy */; };
-		2C885B572CB2B83300C23BAD /* AIProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 2C885B562CB2B83300C23BAD /* AIProxy */; };
+		2C885B5A2CB2EF1D00C23BAD /* AIProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 2C885B592CB2EF1D00C23BAD /* AIProxy */; };
 		2CD964C92C1BD144006DAD57 /* AIProxyFalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD964C82C1BD144006DAD57 /* AIProxyFalApp.swift */; };
 		2CD964CB2C1BD144006DAD57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD964CA2C1BD144006DAD57 /* ContentView.swift */; };
 		2CD964CD2C1BD145006DAD57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD964CC2C1BD145006DAD57 /* Assets.xcassets */; };
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C885B572CB2B83300C23BAD /* AIProxy in Frameworks */,
+				2C885B5A2CB2EF1D00C23BAD /* AIProxy in Frameworks */,
 				2C20F29C2CB0EB31001ECE32 /* AIProxy in Frameworks */,
 				2C885B432CB1CD0A00C23BAD /* AIProxy in Frameworks */,
 			);
@@ -101,7 +101,7 @@
 			packageProductDependencies = (
 				2C20F29B2CB0EB31001ECE32 /* AIProxy */,
 				2C885B422CB1CD0A00C23BAD /* AIProxy */,
-				2C885B562CB2B83300C23BAD /* AIProxy */,
+				2C885B592CB2EF1D00C23BAD /* AIProxy */,
 			);
 			productName = AIProxyFal;
 			productReference = 2CD964C52C1BD144006DAD57 /* AIProxyFal.app */;
@@ -132,7 +132,7 @@
 			);
 			mainGroup = 2CD964BC2C1BD144006DAD57;
 			packageReferences = (
-				2C885B552CB2B83300C23BAD /* XCRemoteSwiftPackageReference "AIProxySwift" */,
+				2C885B582CB2EF1D00C23BAD /* XCRemoteSwiftPackageReference "AIProxySwift" */,
 			);
 			productRefGroup = 2CD964C62C1BD144006DAD57 /* Products */;
 			projectDirPath = "";
@@ -372,7 +372,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2C885B552CB2B83300C23BAD /* XCRemoteSwiftPackageReference "AIProxySwift" */ = {
+		2C885B582CB2EF1D00C23BAD /* XCRemoteSwiftPackageReference "AIProxySwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lzell/AIProxySwift";
 			requirement = {
@@ -391,9 +391,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = AIProxy;
 		};
-		2C885B562CB2B83300C23BAD /* AIProxy */ = {
+		2C885B592CB2EF1D00C23BAD /* AIProxy */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2C885B552CB2B83300C23BAD /* XCRemoteSwiftPackageReference "AIProxySwift" */;
+			package = 2C885B582CB2EF1D00C23BAD /* XCRemoteSwiftPackageReference "AIProxySwift" */;
 			productName = AIProxy;
 		};
 /* End XCSwiftPackageProductDependency section */

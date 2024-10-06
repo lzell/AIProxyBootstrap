@@ -14,7 +14,7 @@ struct TextToImageView: View {
     @State private var imageUrl: String?
     @State private var isLoading: Bool = false
     
-    func generate() async throws {
+    private func generate() async throws {
         
         let input = FalFastSDXLInputSchema(
             prompt: prompt,
