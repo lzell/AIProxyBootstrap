@@ -29,7 +29,12 @@ struct ContentView: View {
                 .frame(maxWidth:.infinity,alignment:.center)
                 
                 VStack{
-                    NavigationLink("Text to Image Example",destination: TextToImageView())
+                    NavigationLink("Text to Image with FastSDXL",destination: TextToImageView())
+                        .bold()
+                        .controlSize(.large)
+                        .tint(.indigo)
+                        .buttonStyle(.bordered)
+                    NavigationLink("Image to Video with Runway",destination: ImageToVideoView())
                         .bold()
                         .controlSize(.large)
                         .tint(.indigo)
