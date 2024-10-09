@@ -30,22 +30,15 @@ struct ContentView: View {
                 
                 VStack{
                     NavigationLink("Chat Example",destination: ChatView())
-                        .bold()
-                        .controlSize(.large)
-                        .buttonStyle(.bordered)
                     NavigationLink("Streaming Chat Example",destination: ChatView())
-                        .bold()
-                        .controlSize(.large)
-                        .buttonStyle(.bordered)
                     NavigationLink("Multi-Modal Chat Example",destination: MultiModalChatView())
-                        .bold()
-                        .controlSize(.large)
-                        .buttonStyle(.bordered)
                     NavigationLink("DALLE Example",destination: DalleView())
-                        .bold()
-                        .controlSize(.large)
-                        .buttonStyle(.bordered)
+                    NavigationLink("Text-to-Speech Example",destination: TextToSpeechView())
                 }
+                .bold()
+                .controlSize(.large)
+                .buttonStyle(.bordered)
+                .tint(.purple)
             }
         }
     }

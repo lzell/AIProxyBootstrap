@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C16EC352CB720580016790F /* TextToSpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C16EC342CB720580016790F /* TextToSpeechView.swift */; };
 		2CCB20342C6C03AF003A8B25 /* StreamingChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB20332C6C03AF003A8B25 /* StreamingChatView.swift */; };
 		2CCB20362C6C0419003A8B25 /* DalleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB20352C6C0419003A8B25 /* DalleView.swift */; };
 		2CD964F02C1CA33B006DAD57 /* AIProxyOpenAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD964EF2C1CA33B006DAD57 /* AIProxyOpenAIApp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C16EC342CB720580016790F /* TextToSpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechView.swift; sourceTree = "<group>"; };
 		2CCB20332C6C03AF003A8B25 /* StreamingChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingChatView.swift; sourceTree = "<group>"; };
 		2CCB20352C6C0419003A8B25 /* DalleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalleView.swift; sourceTree = "<group>"; };
 		2CD964EC2C1CA33B006DAD57 /* AIProxyOpenAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIProxyOpenAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				2CCB20332C6C03AF003A8B25 /* StreamingChatView.swift */,
 				2CD964FD2C1CA3DC006DAD57 /* MultiModalChatView.swift */,
 				2CCB20352C6C0419003A8B25 /* DalleView.swift */,
+				2C16EC342CB720580016790F /* TextToSpeechView.swift */,
 				2CD965042C1CA4CF006DAD57 /* AppConstants.swift */,
 				2CD964F32C1CA33D006DAD57 /* Assets.xcassets */,
 				2CD964F52C1CA33D006DAD57 /* Preview Content */,
@@ -164,6 +167,7 @@
 				2CCB20362C6C0419003A8B25 /* DalleView.swift in Sources */,
 				2CD965002C1CA3F3006DAD57 /* ChatView.swift in Sources */,
 				2CD964FE2C1CA3DC006DAD57 /* MultiModalChatView.swift in Sources */,
+				2C16EC352CB720580016790F /* TextToSpeechView.swift in Sources */,
 				2CD964F22C1CA33B006DAD57 /* ContentView.swift in Sources */,
 				2CD964F02C1CA33B006DAD57 /* AIProxyOpenAIApp.swift in Sources */,
 				2CCB20342C6C03AF003A8B25 /* StreamingChatView.swift in Sources */,
@@ -313,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.toddham.AIProxySampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddham.bootstrap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,7 +346,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.toddham.AIProxySampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddham.bootstrap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
