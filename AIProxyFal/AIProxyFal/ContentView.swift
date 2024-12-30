@@ -34,11 +34,6 @@ struct ContentView: View {
                         .controlSize(.large)
                         .tint(.indigo)
                         .buttonStyle(.bordered)
-                    NavigationLink("Image to Video with Runway",destination: ImageToVideoView())
-                        .bold()
-                        .controlSize(.large)
-                        .tint(.indigo)
-                        .buttonStyle(.bordered)
                 }
             }
         }
