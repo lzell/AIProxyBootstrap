@@ -9,16 +9,23 @@ import AIProxy // The AIProxy SPM package is found at https://github.com/lzell/A
 import Foundation
 import UIKit
 
-// Visit http://airoxy.pro to get a new partial key and DeviceCheck bypass token.
-//
-// See the README at https://github.com/lzell/AIProxySwift for instructions on
-// adding a DeviceCheck bypass token as an environment variable (which is required
-// for AIProxy to work in the iOS simulator)
-#warning("You must replace the placeholders below")
-let openAIService = AIProxy.openAIService(
-    partialKey: "partial-key-from-your-developer-dashboard",
-    serviceURL: "service-url-from-your-developer-dashboard"
+#warning(
+    """
+    Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
+    Please see https://www.aiproxy.pro/docs/integration-guide.html")
+    """
 )
+
+/* Uncomment for BYOK use cases */
+ let openAIService = AIProxy.openAIDirectService(
+     unprotectedAPIKey: "your-openai-key"
+ )
+
+/* Uncomment for all other production use cases */
+// let openAIService = AIProxy.openAIService(
+//     partialKey: "partial-key-from-your-developer-dashboard",
+//     serviceURL: "service-url-from-your-developer-dashboard"
+// )
 
 struct AIProxyIntegration {
 

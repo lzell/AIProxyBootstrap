@@ -23,7 +23,7 @@ struct TextGenerationView: View {
                 model: "gemini-1.5-flash",
                 contents: [
                     .init(
-                        parts: [.init(text: "Tell me a joke")]
+                        parts: [.text("Tell me a joke")]
                     )
                 ]
             )

@@ -28,7 +28,7 @@ struct ImageGenView: View {
             // mode - must be set to image-to-image
             // Learn more: https://platform.stability.ai/docs/api-reference#tag/Generate
             
-            let response = try await service.ultraRequest(body: body)
+            let response = try await stabilityService.ultraRequest(body: body)
             image = UIImage(data: response.imageData)
         }  catch AIProxyError.unsuccessfulRequest(let statusCode, let responseBody) {
             print("Received non-200 status code: \(statusCode) with response body: \(responseBody)")
@@ -76,7 +76,7 @@ struct ImageGenView: View {
                             .controlSize(.regular)
                             .frame(maxWidth:.infinity)
                     } else {
-                        Text("Generate Text")
+                        Text("Generate Image")
                             .bold()
                             .frame(maxWidth:.infinity)
                     }

@@ -20,7 +20,7 @@ struct TranslationView: View {
         defer { isLoading = false }
         do {
             let body = DeepLTranslateRequestBody(targetLang: "ES", text: [prompt])
-            let response = try await service.translateRequest(body: body)
+            let response = try await deepLService.translateRequest(body: body)
             // Do something with `response.translations`
             result = response.translations.first?.text ?? ""
             showingAlert = true
