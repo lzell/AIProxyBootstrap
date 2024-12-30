@@ -11,7 +11,7 @@ import AIProxy
 struct ImageGenView: View {
     
     @State private var prompt = ""
-    @State private var imageUrl: String?
+    @State private var imageUrl: URL?
     @State private var isLoading = false
 
     func generate() async throws {
@@ -25,7 +25,7 @@ struct ImageGenView: View {
                 input: input
             )
             print("Done creating SDXL image: ", output.first ?? "")
-            imageUrl = output.first ?? ""
+            imageUrl = output.first
         }  catch AIProxyError.unsuccessfulRequest(let statusCode, let responseBody) {
             print("Received non-200 status code: \(statusCode) with response body: \(responseBody)")
         } catch {
@@ -38,7 +38,7 @@ struct ImageGenView: View {
                 
             VStack{
                 if (imageUrl != nil) {
-                    AsyncImage(url: URL(string: imageUrl!)) { phase in
+                    AsyncImage(url: imageUrl) { phase in
                         if let image = phase.image {
                             image
                                 .resizable()

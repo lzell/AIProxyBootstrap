@@ -83,7 +83,7 @@ struct TextToImageView: View {
                             .controlSize(.regular)
                             .frame(maxWidth:.infinity)
                     } else {
-                        Text("Generate Text")
+                        Text("Generate Image")
                             .bold()
                             .frame(maxWidth:.infinity)
                     }

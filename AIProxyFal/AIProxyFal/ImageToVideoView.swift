@@ -93,14 +93,12 @@ struct ImageToVideoView: View {
         defer { isLoading = false }
         
         let input = FalRunwayGen3AlphaInputSchema(
-            imageUrl: imageUrl,
-            prompt: prompt
+            imageUrl: "https://www.sonomacounty.com/wp-content/uploads/2023/09/activities_ballooning_Sonoma_Ballooning_Sonoma_County_900x675.png",
+            prompt: "A hot air balloon floating in the sky."
         )
         do {
             let output = try await falService.createRunwayGen3AlphaVideo(input: input)
             print(output.video?.url?.absoluteString ?? "No video URL")
-            videoUrl = output.video?.url?.absoluteString ?? ""
-            showingAlert = true
         }  catch AIProxyError.unsuccessfulRequest(let statusCode, let responseBody) {
             print("Received non-200 status code: \(statusCode) with response body: \(responseBody)")
         } catch {

@@ -8,15 +8,21 @@
 import AIProxy
 
 enum AppConstants {
-    #warning(
+    #error(
         """
-        You must follow the AIProxy integration guide to build and run on device.
+        Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
         Please see https://www.aiproxy.pro/docs/integration-guide.html")
         """
     )
     
-    static let openAIService = AIProxy.openAIService(
-        partialKey: "hardcode_partial_key_here",
-        serviceURL: "hardcode_service_url_here"
+    /* Uncomment for BYOK use cases */
+    static let openAIService = AIProxy.openAIDirectService(
+        unprotectedAPIKey: "your-openai-key"
     )
+
+    /* Uncomment for all other production use cases */
+//    static let openAIService = AIProxy.openAIService(
+//        partialKey: "partial-key-from-your-developer-dashboard",
+//        serviceURL: "service-url-from-your-developer-dashboard"
+//    )
 }

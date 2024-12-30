@@ -10,16 +10,23 @@ import SwiftUI
 import WebKit
 import Foundation
 
-// Visit http://airoxy.pro to get a new partial key and DeviceCheck bypass token.
-//
-// See the README at https://github.com/lzell/AIProxySwift for instructions on
-// adding a DeviceCheck bypass token as an environment variable (which is required
-// for AIProxy to work in the iOS simulator)
-#warning("You must replace the placeholder below")
-let service = AIProxy.anthropicService(
-    partialKey: "hardcode_partial_key_here",
-    serviceURL: "hardcode_service_url_here"
+#error(
+    """
+    Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
+    Please see https://www.aiproxy.pro/docs/integration-guide.html")
+    """
 )
+
+/* Uncomment for BYOK use cases */
+let anthropicService = AIProxy.anthropicDirectService(
+    unprotectedAPIKey: "your-anthropic-key"
+)
+
+/* Uncomment for all other production use cases */
+//let anthropicService = AIProxy.anthropicService(
+//    partialKey: "partial-key-from-your-developer-dashboard",
+//    serviceURL: "service-url-from-your-developer-dashboard"
+//)
 
 struct ContentView: View {
 
@@ -127,7 +134,7 @@ struct ContentView: View {
                                 ],
                                 model: "claude-3-5-sonnet-20240620"
                             )
-                            let response = try await service.messageRequest(body: requestBody)
+                            let response = try await anthropicService.messageRequest(body: requestBody)
                             if let puzzle = getPuzzle(fromClaudeResponse: response) {
                                 updateUI(withPuzzle: puzzle)
                             }
