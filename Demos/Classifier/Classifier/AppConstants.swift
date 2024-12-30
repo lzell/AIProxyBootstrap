@@ -13,7 +13,7 @@ enum AppConstants {
     
     static let videoSampleQueue = DispatchQueue(label: "com.AIProxyBootstrap.videoSampleQueue")
     
-    #warning(
+    #error(
         """
         Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
         Please see https://www.aiproxy.pro/docs/integration-guide.html")
@@ -21,13 +21,13 @@ enum AppConstants {
     )
     
     /* Uncomment for BYOK use cases */
-//     static let openAIService = AIProxy.openAIDirectService(
-//         unprotectedAPIKey: "your-openai-key"
-//     )
+    static let openAIService = AIProxy.openAIDirectService(
+        unprotectedAPIKey: "your-openai-key"
+    )
 
     /* Uncomment for all other production use cases */
-    // static let openAIService = AIProxy.openAIService(
-    //     partialKey: "partial-key-from-your-developer-dashboard",
-    //     serviceURL: "service-url-from-your-developer-dashboard"
-    // )
+//    static let openAIService = AIProxy.openAIService(
+//        partialKey: "partial-key-from-your-developer-dashboard",
+//        serviceURL: "service-url-from-your-developer-dashboard"
+//    )
 }

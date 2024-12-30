@@ -7,7 +7,7 @@
 
 import AIProxy
 
-#warning(
+#error(
     """
     Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
     Please see https://www.aiproxy.pro/docs/integration-guide.html")
@@ -15,13 +15,13 @@ import AIProxy
 )
 
 /* Uncomment for BYOK use cases */
-// let deepLService = AIProxy.deepLDirectService(
-//     unprotectedAPIKey: "your-deepL-key",
-//     accountType: .free
-// )
+let deepLService = AIProxy.deepLDirectService(
+    unprotectedAPIKey: "your-deepL-key",
+    accountType: .free
+)
 
 /* Uncomment for all other production use cases */
-// let service = AIProxy.deepLService(
-//     partialKey: "partial-key-from-your-developer-dashboard",
-//     serviceURL: "service-url-from-your-developer-dashboard"
-// )
+//let deepLService = AIProxy.deepLService(
+//    partialKey: "partial-key-from-your-developer-dashboard",
+//    serviceURL: "service-url-from-your-developer-dashboard"
+//)

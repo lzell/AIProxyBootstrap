@@ -21,7 +21,7 @@ enum AppConstants {
 
     static let audioSampleQueue = DispatchQueue(label: "com.AIProxyBootstrap.audioSampleQueue")
 
-    #warning(
+    #error(
         """
         Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
         Please see https://www.aiproxy.pro/docs/integration-guide.html")
@@ -34,8 +34,8 @@ enum AppConstants {
     )
 
     /* Uncomment for all other production use cases */
-    // let openAIService = AIProxy.openAIService(
-    //     partialKey: "partial-key-from-your-developer-dashboard",
-    //     serviceURL: "service-url-from-your-developer-dashboard"
-    // )
+//    let openAIService = AIProxy.openAIService(
+//        partialKey: "partial-key-from-your-developer-dashboard",
+//        serviceURL: "service-url-from-your-developer-dashboard"
+//    )
 }

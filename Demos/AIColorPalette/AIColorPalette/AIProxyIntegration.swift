@@ -9,7 +9,7 @@ import AIProxy // The AIProxy SPM package is found at https://github.com/lzell/A
 import Foundation
 import UIKit
 
-#warning(
+#error(
     """
     Uncomment one of the methods below. To build and run on device you must follow the AIProxy integration guide.
     Please see https://www.aiproxy.pro/docs/integration-guide.html")
@@ -17,15 +17,15 @@ import UIKit
 )
 
 /* Uncomment for BYOK use cases */
- let openAIService = AIProxy.openAIDirectService(
-     unprotectedAPIKey: "your-openai-key"
- )
+let openAIService = AIProxy.openAIDirectService(
+    unprotectedAPIKey: "your-openai-key"
+)
 
 /* Uncomment for all other production use cases */
-// let openAIService = AIProxy.openAIService(
-//     partialKey: "partial-key-from-your-developer-dashboard",
-//     serviceURL: "service-url-from-your-developer-dashboard"
-// )
+//let openAIService = AIProxy.openAIService(
+//    partialKey: "partial-key-from-your-developer-dashboard",
+//    serviceURL: "service-url-from-your-developer-dashboard"
+//)
 
 struct AIProxyIntegration {
 
